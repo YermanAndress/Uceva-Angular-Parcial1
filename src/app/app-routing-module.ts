@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'products',
     loadChildren: () => import('./modules/products/products-module').then(m => m.ProductsModule)
   },
+    {
+    path: 'sistema',
+    loadChildren: () => import('./modules/sistema/sistema-module').then(m => m.SistemaModule)
+  },
   {
     path: '**',
     redirectTo: 'users'
