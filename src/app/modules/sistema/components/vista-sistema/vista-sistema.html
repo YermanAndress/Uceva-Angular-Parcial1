@@ -1,0 +1,29 @@
+<div class="bg-white p-4 rounded shadow-sm border mb-4">
+  <h3 class="fw-bold mb-3 border-bottom pb-2">Sistema de Diseño Atómico</h3>
+  <p class="text-muted">Metodología propuesta por Brad Frost que divide las interfaces en niveles jerárquicos.</p>
+  
+  <div class="row g-3 mt-2">
+    @for (nivel of niveles; track nivel.name) {
+      <div class="col-md-4 col-lg">
+        <app-stat-card 
+          [title]="nivel.name" 
+          [description]="nivel.desc" 
+          [badgeText]="'Nivel'" 
+          [color]="nivel.badge">
+        </app-stat-card>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="row g-4">
+  <div class="col-md-4">
+    <app-info-card title="¿Qué es?" [items]="queEsData" type="info"></app-info-card>
+  </div>
+  <div class="col-md-4">
+    <app-info-card title="¿Por qué usarlos?" [items]="porQueUsarData" type="success"></app-info-card>
+  </div>
+  <div class="col-md-4">
+    <app-info-card title="Problemas sin un Sistema" [items]="problemasData" type="danger"></app-info-card>
+  </div>
+</div>
