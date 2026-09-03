@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/principios-soft/principios-soft.module').then(m => m.PrincipiosSoftModule)
   },
+    {
+    path: 'sistema',
+    loadChildren: () => import('./modules/sistema/sistema-module').then(m => m.SistemaModule)
+  },
   {
     path: '**',
     redirectTo: 'arq-software',
