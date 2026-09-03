@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'users',
-    loadChildren: () => import('./modules/users/users-module').then(m => m.UsersModule)
+    path: 'arq-software',
+    loadChildren: () =>
+        import('./modules/arq-software/arq-software-module').then((m) => m.ArqSoftwareModule),
   },
   {
-    path: 'products',
-    loadChildren: () => import('./modules/products/products-module').then(m => m.ProductsModule)
+    path: 'principios',
+    loadChildren: () =>
+      import('./modules/principios-soft/principios-soft.module').then(m => m.PrincipiosSoftModule)
   },
     {
     path: 'sistema',
@@ -16,12 +18,13 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'users'
+    redirectTo: 'arq-software',
   },
+  { path: '', redirectTo: '/arq-software', pathMatch: 'full' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
