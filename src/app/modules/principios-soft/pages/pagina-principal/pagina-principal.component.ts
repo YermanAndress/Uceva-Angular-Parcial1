@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Concepto } from '../../../../core/interfaces/concepto.interface';
-import { PrincipiosSoftService } from '../../services/principios-soft.service.service';
+import { PrincipiosSoftService } from '../../services/principios-soft.service';
 
 /** Presenta los principios y ejercicios de arquitectura de software. */
 @Component({

@@ -5,11 +5,11 @@ import { PaginaPrincipalComponent } from './pages/pagina-principal/pagina-princi
 /** Configura las rutas internas del modulo de principios. */
 const routes: Routes = [
   {
-    path: 'principios', // Ruta vacía, se carga al navegar a /principios
+    path: '',
     component: PaginaPrincipalComponent
   },
   {
-    path: '**', // Ruta vacía, se carga al navegar a /principios
+    path: '**',
     component: PaginaPrincipalComponent
   }
 ];

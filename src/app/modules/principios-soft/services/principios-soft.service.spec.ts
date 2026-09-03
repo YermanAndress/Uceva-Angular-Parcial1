@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PrincipiosSoftService } from './principios-soft.service.service';
+import { PrincipiosSoftService } from './principios-soft.service';
 
 describe('PrincipiosSoftService', () => {
   let service: PrincipiosSoftService;
