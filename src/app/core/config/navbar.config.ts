@@ -1,4 +1,4 @@
-import { NavbarItem } from "../../modules/shared/interfaces/navbar.interface";
+import { NavbarItem } from '../../modules/shared/interfaces/navbar.interface';
 
 /**
  * Configuración de los ítems del menú de navegación principal.
@@ -14,6 +14,5 @@ import { NavbarItem } from "../../modules/shared/interfaces/navbar.interface";
  * <app-navbar></app-navbar>
  */
 export const NAVBAR_ITEMS: NavbarItem[] = [
-    { label: 'Usuarios', url: '/users' },
-    { label: 'Productos', url: '/products' },
-] 
+  { label: 'Arquitectura de Software', url: '/arq-software' },
+];

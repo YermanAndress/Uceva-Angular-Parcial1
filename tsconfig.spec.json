@@ -4,13 +4,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
-    "types": [
-      "jest"
-    ],
+    "types": ["jest"],
     "esModuleInterop": true
   },
-  "include": [
-    "src/**/*.spec.ts",
-    "src/**/*.ts"
-  ]
+  "include": ["src/**/*.spec.ts", "src/**/*.ts"]
 }
