@@ -1,0 +1,21 @@
+<div class="row g-4">
+  @for (topic of topics; track topic) {
+    <div class="col-12 col-lg-6">
+      <div class="card h-100 border">
+        <div class="card-body">
+          <h5 class="card-title">{{ topic.title }}</h5>
+          <p class="card-text">{{ topic.summary }}</p>
+          <hr class="divider-spacing" />
+          <ul class="list-unstyled mb-0">
+            @for (concept of topic.concepts; track concept) {
+              <li class="mb-2">
+                <span class="badge bg-primary me-2">•</span>
+                {{ concept }}
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  }
+</div>
