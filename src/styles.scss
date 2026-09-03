@@ -1,13 +1,292 @@
-/* You can add global styles to this file, and also import other style files */
-
-.divider-spacing {
-  height: 3rem;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+:root {
+  --ink: #181a19;
+  --muted: #707570;
+  --line: #e3e3e3;
+  --paper: #ffffff;
+  --canvas: #eeeeee;
+  --accent: #b45b93;
+  --accent-soft: #f7e5f1;
 }
 
-tr th, tr td {
-  text-align: center;
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+}
+
+.principios-container {
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  padding: 3.5rem 1.5rem 4.5rem !important;
+  font-family: Arial, sans-serif !important;
+}
+
+.principios-container h1 {
+  max-width: 680px;
+  margin: 0 !important;
+  padding: 1rem 0 !important;
+  border-bottom: 0 !important;
+  color: var(--ink) !important;
+  font-family: Georgia, serif !important;
+  font-size: clamp(2rem, 5vw, 3.5rem) !important;
+  line-height: 1.02;
+}
+
+.principios-container .intro {
+  max-width: 680px;
+  margin: 1rem 0 2.5rem !important;
+  color: var(--muted) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+}
+
+.principios-container .principios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 1.35rem;
+  margin-bottom: 3.5rem !important;
+}
+
+.principios-container .principio-card {
+  position: relative;
+  min-height: 410px;
+  padding: 13rem 1.25rem 4rem !important;
+  overflow: hidden;
+  border: 0;
+  border-radius: 5px !important;
+  background: var(--paper) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.principios-container .principio-card::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 10.5rem;
+  background-position: center;
+  background-size: cover;
+  content: '';
+}
+
+.principios-container .principio-card:nth-child(1)::before {
+  background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80');
+}
+
+.principios-container .principio-card:nth-child(2)::before {
+  background-image: url('https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=80');
+}
+
+.principios-container .principio-card:nth-child(3)::before {
+  background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80');
+}
+
+.principios-container .principio-card:nth-child(4)::before {
+  background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80');
+}
+
+.principios-container .principio-card:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1) !important;
+  transform: translateY(-2px);
+}
+
+.principios-container .principio-card h2 {
+  margin: 0 0 0.8rem !important;
+  color: var(--ink) !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 1.05rem !important;
+  line-height: 1.25;
+}
+
+.principios-container .principio-card h2::before {
+  display: block;
+  width: max-content;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  content: 'Principio';
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+.principios-container .descripcion {
+  color: var(--muted) !important;
+  line-height: 1.65 !important;
+}
+
+.principios-container .beneficios {
+  margin: 1.5rem 0 !important;
+}
+
+.principios-container h4 {
+  margin: 0 0 0.5rem !important;
+  color: var(--ink);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.principios-container .ejemplo-bueno,
+.principios-container .ejemplo-mal {
+  margin: 0.75rem 0 !important;
+  padding: 0.9rem 1rem !important;
+  border-left-width: 3px !important;
+  border-radius: 0;
+}
+
+.principios-container .ejemplo-bueno {
+  border-left-color: var(--accent) !important;
+  background: var(--accent-soft) !important;
+}
+
+.principios-container .ejemplo-mal {
+  border-left-color: #8a6258 !important;
+  background: #f3ece9 !important;
+}
+
+.principios-container .ejemplo-bueno h4,
+.principios-container .ejemplo-mal h4 {
+  font-size: 0;
+}
+
+.principios-container .ejemplo-bueno h4::after {
+  content: 'Buen ejemplo';
+  font-size: 0.75rem;
+}
+
+.principios-container .ejemplo-mal h4::after {
+  content: 'Mal ejemplo';
+  font-size: 0.75rem;
+}
+
+.principios-container .principio-card::after {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  display: grid;
+  width: 1.7rem;
+  height: 1.7rem;
+  place-items: center;
+  border: 1px solid #c9ceca;
+  border-radius: 50%;
+  color: var(--ink);
+  content: '\2197';
+  font-size: 1rem;
+}
+
+.principios-container .resumen,
+.principios-container .ejercicio {
+  margin: 0 0 3rem !important;
+  padding: 1.5rem !important;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--paper);
+  box-shadow: none;
+}
+
+.principios-container table {
+  width: 100%;
+  border: 0 !important;
+  border-collapse: separate !important;
+  border-spacing: 0 0.7rem !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.principios-container th {
+  padding: 0.85rem 1rem !important;
+  background: transparent !important;
+  color: var(--muted) !important;
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.principios-container td {
+  padding: 0.9rem 1rem !important;
+  border-top: 1px solid var(--line) !important;
+  border-bottom: 1px solid var(--line) !important;
+  background: var(--paper) !important;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.principios-container tbody tr td:first-child {
+  border-left: 1px solid var(--line) !important;
+  border-radius: 5px 0 0 5px;
+}
+
+.principios-container tbody tr td:last-child {
+  border-right: 1px solid var(--line) !important;
+  border-radius: 0 5px 5px 0;
+}
+
+.principios-container tbody tr:hover td {
+  background: var(--accent-soft) !important;
+}
+
+.principios-container .resumen tbody tr,
+.principios-container .ejercicio tbody tr {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.divider-spacing {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .principios-container {
+    padding: 2.5rem 1rem 3rem !important;
+  }
+
+  .principios-container .principio-card {
+    min-height: 0;
+    padding-top: 12rem !important;
+  }
+
+  .principios-container .resumen,
+  .principios-container .ejercicio {
+    margin-right: -0.25rem !important;
+    margin-left: -0.25rem !important;
+    padding: 1rem !important;
+  }
+
+  .principios-container table {
+    display: table;
+    border-spacing: 0 0.6rem !important;
+  }
+
+  .principios-container thead {
+    display: none;
+  }
+
+  .principios-container tbody,
+  .principios-container tr,
+  .principios-container td {
+    display: block;
+    width: auto;
+  }
+
+  .principios-container tbody tr {
+    margin-bottom: 0.8rem;
+  }
+
+  .principios-container tbody tr td {
+    border-right: 1px solid var(--line) !important;
+    border-bottom: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .principios-container tbody tr td:first-child {
+    border-radius: 5px 5px 0 0 !important;
+  }
+
+  .principios-container tbody tr td:last-child {
+    border-bottom: 1px solid var(--line) !important;
+    border-radius: 0 0 5px 5px !important;
+  }
 }

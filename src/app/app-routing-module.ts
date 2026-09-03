@@ -2,18 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  // ... otras rutas (users, products, etc.)
   {
-    path: 'users',
-    loadChildren: () => import('./modules/users/users-module').then(m => m.UsersModule)
+    path: 'principios',
+    loadChildren: () => import('./modules/principios-soft/principios-soft.module')
+      .then(m => m.PrincipiosSoftModule)
   },
-  {
-    path: 'products',
-    loadChildren: () => import('./modules/products/products-module').then(m => m.ProductsModule)
-  },
-  {
-    path: '**',
-    redirectTo: 'users'
-  },
+  { path: '', redirectTo: '/principios', pathMatch: 'full' }
 ];
 
 @NgModule({

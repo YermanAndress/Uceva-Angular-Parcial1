@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PrincipiosSoftServiceService } from './principios-soft.service.service';
+import { PrincipiosSoftService } from './principios-soft.service.service';
 
-describe('PrincipiosSoftServiceService', () => {
-  let service: PrincipiosSoftServiceService;
+describe('PrincipiosSoftService', () => {
+  let service: PrincipiosSoftService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(PrincipiosSoftServiceService);
+    service = TestBed.inject(PrincipiosSoftService);
   });
 
   it('should be created', () => {
