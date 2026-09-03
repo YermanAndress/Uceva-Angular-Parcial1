@@ -4,8 +4,5 @@ import { Component } from '@angular/core';
   selector: 'app-arq-software',
   standalone: false,
   templateUrl: './arq-software.html',
-  styleUrl: './arq-software.scss',
 })
-export class ArqSoftware {
-
-}
+export class ArqSoftware {}

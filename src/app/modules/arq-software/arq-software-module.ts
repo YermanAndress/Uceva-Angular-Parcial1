@@ -7,15 +7,7 @@ import { ArqSoftwareRoutingModule } from './arq-software-routing-module';
 import { ArqSoftware } from './arq-software';
 
 @NgModule({
-  declarations: [
-    ListArqSoftwareComponent,
-    CardArqSoftwareComponent,
-    ArqSoftware
-  ],
-  imports: [
-    CommonModule,
-    SharedModule,
-    ArqSoftwareRoutingModule
-  ]
+  declarations: [ListArqSoftwareComponent, CardArqSoftwareComponent, ArqSoftware],
+  imports: [CommonModule, SharedModule, ArqSoftwareRoutingModule],
 })
-export class ArqSoftwareModule { }
+export class ArqSoftwareModule {}

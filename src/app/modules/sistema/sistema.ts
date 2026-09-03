@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   standalone: false,
   templateUrl: './sistema.html',
 })
-export class Sistema {
-
-}
+export class Sistema {}
