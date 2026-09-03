@@ -1,0 +1,19 @@
+<section class="table-container" aria-label="Tabla de datos">
+  <h2 *ngIf="title">{{ title }}</h2>
+  <div class="table-scroll">
+    <table>
+    <thead>
+      <tr>
+        <th *ngIf="showId">#</th>
+        <th *ngFor="let header of headers">{{ header }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of data; let i = index">
+        <td *ngIf="showId">{{ i + 1 }}</td>
+        <td *ngFor="let key of headers">{{ row[key] }}</td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+</section>

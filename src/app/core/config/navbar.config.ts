@@ -13,6 +13,8 @@ import { NavbarItem } from '../../modules/shared/interfaces/navbar.interface';
  * @example
  * <app-navbar></app-navbar>
  */
-export const NAVBAR_ITEMS: NavbarItem[] = [
-  { label: 'Arquitectura de Software', url: '/arq-software' },
+/** Opciones de navegacion disponibles en la aplicacion. */
+export const NAV_ITEMS: NavbarItem[] = [
+    { label: 'Arquitectura de Software', url: '/arq-software' },
+    { label: 'Principios de Arquitectura', url: '/principios' },
 ];

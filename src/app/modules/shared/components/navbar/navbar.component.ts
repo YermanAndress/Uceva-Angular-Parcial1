@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NAVBAR_ITEMS } from '../../../../core/config/navbar.config';
+import { NAV_ITEMS } from '../../../../core/config/navbar.config';
 import { NavbarItem } from '../../interfaces/navbar.interface';
 
 /**
@@ -46,6 +46,6 @@ export class NavbarComponent {
    * configuración definida en el core de la aplicación.
    */
   constructor(){
-    this.navbarItems = NAVBAR_ITEMS;
+    this.navbarItems = NAV_ITEMS;
   }
 }
